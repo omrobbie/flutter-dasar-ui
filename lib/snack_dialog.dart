@@ -22,7 +22,7 @@ class _SnackDialogScreenState extends State<SnackDialogScreen> {
         children: <Widget>[
           RaisedButton(
             child: Text('Show Alert'),
-            onPressed: () {},
+            onPressed: () => tampilDialog(context),
           ),
           SizedBox(height: 8.0),
           RaisedButton(
@@ -43,6 +43,24 @@ class _SnackDialogScreenState extends State<SnackDialogScreen> {
       key: _key,
       appBar: _appBar,
       body: _body,
+    );
+  }
+
+  // fungsi untuk menampilkan alert dialog
+  tampilDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      child: AlertDialog(
+        title: Text('Hello'),
+        content: Text('Ini adalah AlertDialog. Silahkan tekan tombol Ok'),
+        actions: <Widget>[
+          FlatButton(
+            child: Text('Ok'),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ],
+      ),
     );
   }
 }
