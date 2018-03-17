@@ -32,7 +32,7 @@ class _SnackDialogScreenState extends State<SnackDialogScreen> {
           SizedBox(height: 8.0),
           RaisedButton(
             child: Text('Show Snackbar'),
-            onPressed: () {},
+            onPressed: () => tampilSnackbar(),
           ),
           SizedBox(height: 8.0),
         ],
@@ -95,5 +95,20 @@ class _SnackDialogScreenState extends State<SnackDialogScreen> {
         ],
       ),
     );
+  }
+
+  // fungsi untuk menampilkan snackbar
+  tampilSnackbar() {
+    var sb = SnackBar(
+      content: Text('Ini adalah Snackbar!'),
+      action: SnackBarAction(
+        label: 'Click Me!',
+        onPressed: () {
+          debugPrint('Anda menekan tombol di Snackbar!');
+        },
+      ),
+    );
+
+    _key.currentState.showSnackBar(sb);
   }
 }
