@@ -8,11 +8,15 @@ class HelloScreen extends StatefulWidget {
 class _HelloScreenState extends State<HelloScreen> {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    var body = Container(
       color: Colors.red,
       margin: EdgeInsets.all(8.0),
       padding: EdgeInsets.all(16.0),
       child: Text('Hello Flutter'),
+    );
+
+    return Scaffold(
+      body: body,
     );
   }
 }
