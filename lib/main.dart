@@ -1,6 +1,5 @@
-import 'package:dasar_ui/hello_screen.dart';
-import 'package:dasar_ui/material_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:dasar_ui/snack_dialog.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MaterialScreen(),
+      home: SnackDialogScreen(),
     );
   }
 }
