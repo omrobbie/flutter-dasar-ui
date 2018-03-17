@@ -17,9 +17,10 @@ class _HelloScreenState extends State<HelloScreen> {
           ],
         ),
       ),
-      margin: EdgeInsets.only(top: 52.0),
       padding: EdgeInsets.all(16.0),
       child: Text('Hello Flutter'),
+      width: 200.0,
+      height: 200.0,
     );
 
     var baris = Row(
@@ -30,8 +31,21 @@ class _HelloScreenState extends State<HelloScreen> {
       children: <Widget>[body, body],
     );
 
+    var label = Text('Hello Flutter');
+
+    var tombol = RaisedButton(
+      child: Text('Tombol'),
+      onPressed: () {},
+    );
+
+    var tumpuk = Stack(
+      children: <Widget>[body, tombol],
+    );
+
     return Scaffold(
-      body: kolom,
+      body: Center(
+        child: tumpuk,
+      ),
     );
   }
 }
