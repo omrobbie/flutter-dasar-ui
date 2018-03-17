@@ -33,12 +33,19 @@ class _MaterialScreenState extends State<MaterialScreen> {
       ],
     );
 
+    var _fab = FloatingActionButton(
+      child: Icon(Icons.add),
+      tooltip: 'Add Floating',
+      onPressed: () {},
+    );
+
     return new Scaffold(
       appBar: _appBar,
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: _body,
       ),
+      floatingActionButton: _fab,
     );
   }
 }
