@@ -17,13 +17,17 @@ class _HelloScreenState extends State<HelloScreen> {
           ],
         ),
       ),
-      margin: EdgeInsets.all(8.0),
+      margin: EdgeInsets.only(top: 52.0),
       padding: EdgeInsets.all(16.0),
       child: Text('Hello Flutter'),
     );
 
+    var baris = Row(
+      children: <Widget>[body, body],
+    );
+
     return Scaffold(
-      body: body,
+      body: baris,
     );
   }
 }
