@@ -26,8 +26,12 @@ class _HelloScreenState extends State<HelloScreen> {
       children: <Widget>[body, body],
     );
 
+    var kolom = Column(
+      children: <Widget>[body, body],
+    );
+
     return Scaffold(
-      body: baris,
+      body: kolom,
     );
   }
 }
