@@ -9,7 +9,6 @@ class _MaterialScreenState extends State<MaterialScreen> {
   @override
   Widget build(BuildContext context) {
     var _appBar = AppBar(
-      leading: Icon(Icons.menu),
       title: Text('Material Design'),
       actions: <Widget>[
         IconButton(
@@ -58,6 +57,46 @@ class _MaterialScreenState extends State<MaterialScreen> {
       ],
     );
 
+    var _drawerHeader = DrawerHeader(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue,
+            Colors.blue[200],
+          ],
+        ),
+      ),
+      child: Column(
+        children: <Widget>[
+          Text('Material Design'),
+          Text('Material Design with Flutter'),
+        ],
+      ),
+    );
+
+    var _drawer = Drawer(
+      child: ListView(
+        children: <Widget>[
+          _drawerHeader,
+          ListTile(
+            title: Text('Home'),
+            leading: Icon(Icons.home),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text('Tutorial'),
+            leading: Icon(Icons.filter),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text('About'),
+            leading: Icon(Icons.face),
+            onTap: () {},
+          ),
+        ],
+      ),
+    );
+
     return new Scaffold(
       appBar: _appBar,
       body: Padding(
@@ -66,6 +105,7 @@ class _MaterialScreenState extends State<MaterialScreen> {
       ),
       floatingActionButton: _fab,
       bottomNavigationBar: _nav,
+      drawer: _drawer,
     );
   }
 }
