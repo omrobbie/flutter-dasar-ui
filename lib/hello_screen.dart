@@ -9,7 +9,14 @@ class _HelloScreenState extends State<HelloScreen> {
   @override
   Widget build(BuildContext context) {
     var body = Container(
-      color: Colors.red,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue,
+            Colors.blue[200],
+          ],
+        ),
+      ),
       margin: EdgeInsets.all(8.0),
       padding: EdgeInsets.all(16.0),
       child: Text('Hello Flutter'),
