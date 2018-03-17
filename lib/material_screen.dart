@@ -27,7 +27,9 @@ class _MaterialScreenState extends State<MaterialScreen> {
           'Flutter Indonesia',
           style: display1,
         ),
-        SizedBox(height: 16.0,),
+        SizedBox(
+          height: 16.0,
+        ),
         Text(
             'Deserunt veniam cupidatat qui eiusmod dolor minim culpa elit irure reprehenderit. Qui ipsum nostrud laborum dolor in cupidatat elit id id. Reprehenderit mollit elit do labore commodo ullamco adipisicing quis qui quis velit esse et. Ipsum ex velit velit magna excepteur. Fugiat velit eiusmod magna veniam velit. Cillum esse sint aliqua Lorem laboris do. Dolore aliqua fugiat cillum magna ipsum laboris anim exercitation mollit do id fugiat reprehenderit exercitation.'),
       ],
@@ -39,6 +41,23 @@ class _MaterialScreenState extends State<MaterialScreen> {
       onPressed: () {},
     );
 
+    var _nav = BottomNavigationBar(
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.hotel),
+          title: Text('Flutter'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.refresh),
+          title: Text('Flutter'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.face),
+          title: Text('Flutter'),
+        ),
+      ],
+    );
+
     return new Scaffold(
       appBar: _appBar,
       body: Padding(
@@ -46,6 +65,7 @@ class _MaterialScreenState extends State<MaterialScreen> {
         child: _body,
       ),
       floatingActionButton: _fab,
+      bottomNavigationBar: _nav,
     );
   }
 }
