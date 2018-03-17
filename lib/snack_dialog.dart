@@ -27,7 +27,7 @@ class _SnackDialogScreenState extends State<SnackDialogScreen> {
           SizedBox(height: 8.0),
           RaisedButton(
             child: Text('Show Option'),
-            onPressed: () {},
+            onPressed: () => tampilOption(context),
           ),
           SizedBox(height: 8.0),
           RaisedButton(
@@ -58,6 +58,39 @@ class _SnackDialogScreenState extends State<SnackDialogScreen> {
           FlatButton(
             child: Text('Ok'),
             onPressed: () => Navigator.of(context).pop(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // fungsi untuk menampilkan option dialog
+  tampilOption(BuildContext context) {
+    showDialog(
+      context: context,
+      child: SimpleDialog(
+        title: Text('Pilih salah satu'),
+        children: <Widget>[
+          SimpleDialogOption(
+            child: Text('Flutter'),
+            onPressed: () {
+              debugPrint('Anda memilih Flutter!');
+              Navigator.of(context).pop();
+            },
+          ),
+          SimpleDialogOption(
+            child: Text('React Native'),
+            onPressed: () {
+              debugPrint('Anda memilih React Native!');
+              Navigator.of(context).pop();
+            },
+          ),
+          SimpleDialogOption(
+            child: Text('Fusetools'),
+            onPressed: () {
+              debugPrint('Anda memilih Fusetools!');
+              Navigator.of(context).pop();
+            },
           ),
         ],
       ),
